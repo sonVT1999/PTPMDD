@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id giáo viên"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên giáo viên"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_idBoMon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id bộ môn"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/txt_hoc_ham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Học hàm"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_hoc_vi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Học vị"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email "
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txt_sdt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số điện thoại 1"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txt_sdt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số điện thoại 2"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSua"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text="Edit" />
+
+        <Button
+            android:id="@+id/btnXoa"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+    </LinearLayout>
+
+</LinearLayout>
