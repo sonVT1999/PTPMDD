@@ -98,14 +98,13 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
         return boMons;
     }
 
-
     private void insert()
     {
         String id = addIdGV.getText().toString();
         if (checkIdGiaoVien(id)) {
             Toast.makeText(this, "Nhập lại mã giáo viên", Toast.LENGTH_SHORT).show();
         } else {
-            String ten = addTenGV.getText().toString(); // sao no do the kia
+            String ten = addTenGV.getText().toString();
 
             String hoc_ham = add_hoc_ham.getText().toString();
             String hoc_vi = add_hoc_vi.getText().toString();

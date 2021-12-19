@@ -2,11 +2,14 @@ package com.example.btl_qlgv_bm.BoMon_Activity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,21 +57,41 @@ public class ActivityAddBoMon extends AppCompatActivity {
     private void insert()
     {
         String id = addId.getText().toString();
-        String ten = addTen.getText().toString();
-        String id_khoa = add_id_khoa.getText().toString();
-        String mo_ta = add_mo_ta.getText().toString();
+        if (checkIdBoMon(id)) {
+            Toast.makeText(this, "Nhập lại mã bộ môn", Toast.LENGTH_SHORT).show();
+        } else {
+            String ten = addTen.getText().toString();
+            String id_khoa = add_id_khoa.getText().toString();
+            String mo_ta = add_mo_ta.getText().toString();
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("maBoMon", id);
-        contentValues.put("tenBoMon", ten);
-        contentValues.put("maKhoa", id_khoa);
-        contentValues.put("moTa", mo_ta);
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("maBoMon", id);
+            contentValues.put("tenBoMon", ten);
+            contentValues.put("maKhoa", id_khoa);
+            contentValues.put("moTa", mo_ta);
 
-        SQLiteDatabase database = Database.initDatabase(this, "DaoTaoDB.s3db");
-        database.insert("BoMonTab",null, contentValues);
-        Intent intent = new Intent(this, ActivityBoMon.class);
-        startActivity(intent);
+            SQLiteDatabase database = Database.initDatabase(this, "DaoTaoDB.s3db");
+            database.insert("BoMonTab", null, contentValues);
+            Intent intent = new Intent(this, ActivityBoMon.class);
+            startActivity(intent);
+        }
+    }
 
+    private boolean checkIdBoMon(String id) {
+        if(TextUtils.isEmpty(id)) {
+            return true;
+        }
+        SQLiteDatabase database = Database.initDatabase(this, DATABASE_NAME);
+        Cursor cursor = database.rawQuery("SELECT * FROM BoMonTab", null);
+        for(int i = 0; i< cursor.getCount(); i++)
+        {
+            cursor.moveToPosition(i);
+            String maBoMon = cursor.getString(0);
+            if(maBoMon.equals(id)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void cancel(){
