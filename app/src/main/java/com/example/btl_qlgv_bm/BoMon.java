@@ -12,5 +12,10 @@ public class BoMon {
         this.makhoa = makhoa;
         this.moTa = moTa;
     }
+
+    @Override
+    public String toString() {
+        return tenBoMon;
+    }
 }
 

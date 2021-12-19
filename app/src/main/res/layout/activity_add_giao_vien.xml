@@ -10,12 +10,10 @@
         android:id="@+id/addTenGV"
         android:layout_width="409dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="10dp"
         android:ems="10"
+        android:hint="Tên giáo viên"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="Tên giáo viên"
-        app:layout_constraintBottom_toTopOf="@+id/add_id_bo_mon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addMaGV" />
@@ -35,47 +33,34 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/add_id_bo_mon"
-        android:layout_width="407dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:hint="Mã bộ môn"
-        app:layout_constraintBottom_toTopOf="@+id/add_hoc_ham"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTenGV" />
-
-    <EditText
         android:id="@+id/add_hoc_ham"
         android:layout_width="163dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="26dp"
         android:ems="10"
+        android:hint="Học hàm"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="Học hàm"
+        app:layout_constraintBottom_toTopOf="@+id/add_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_id_bo_mon" />
+        app:layout_constraintTop_toBottomOf="@+id/spn_id_bomon" />
 
     <EditText
         android:id="@+id/add_hoc_vi"
         android:layout_width="155dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:ems="10"
+        android:hint="Học vị"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:hint="Học vị"
+        app:layout_constraintBottom_toTopOf="@+id/add_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_id_bo_mon" />
+        app:layout_constraintTop_toBottomOf="@+id/spn_id_bomon" />
 
     <EditText
         android:id="@+id/add_email"
@@ -173,5 +158,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.476" />
+
+    <Spinner
+        android:id="@+id/spn_id_bomon"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="18dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/add_hoc_ham"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTenGV"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
