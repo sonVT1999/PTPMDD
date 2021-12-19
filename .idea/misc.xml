@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/activity_add_bo_mon.xml" value="0.25416666666666665" />
         <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/activity_add_giao_vien.xml" value="0.4" />
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/activity_bomon.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/activity_update_bo_mon.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/activity_update_giao_vien.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/listview_bomon.xml" value="0.25416666666666665" />
+        <entry key="..\:/BTL_PTPMDD/app/src/main/res/layout/listview_giaovien.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BTL_QLGV_BM/app/src/main/res/layout/activity_add_bo_mon.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BTL_QLGV_BM/app/src/main/res/layout/activity_add_giao_vien.xml" value="0.264" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/BTL_QLGV_BM/app/src/main/res/layout/activity_bomon.xml" value="0.27447916666666666" />

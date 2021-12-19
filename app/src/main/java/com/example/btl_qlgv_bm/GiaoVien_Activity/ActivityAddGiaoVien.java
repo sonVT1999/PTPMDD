@@ -41,7 +41,14 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
         btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insert();
+                if (addIdGV .length() == 0 || addIdGV .equals("") || addIdGV == null){
+                    Toast.makeText(ActivityAddGiaoVien.this,"Mã giáo viên không được để trống!",Toast.LENGTH_LONG).show();
+                }else if (addTenGV .length() == 0 || addTenGV .equals("") || addTenGV == null) {
+                    Toast.makeText(ActivityAddGiaoVien.this, "Tên giáo viên không được để trống!", Toast.LENGTH_LONG).show();
+                } else {
+                    insert();
+                }
+
             }
         });
 

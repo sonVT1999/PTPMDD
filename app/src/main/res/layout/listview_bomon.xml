@@ -41,13 +41,13 @@
             android:id="@+id/btn_sua"
             android:layout_width="203dp"
             android:layout_height="wrap_content"
-            android:text="Edit" />
+            android:text="Sửa" />
 
         <Button
             android:id="@+id/btn_xoa"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="Delete" />
+            android:text="Xóa" />
     </LinearLayout>
 
 </LinearLayout>
