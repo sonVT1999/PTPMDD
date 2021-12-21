@@ -30,7 +30,7 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
     final String DATABASE_NAME = "DaoTaoDB.s3db";
     Button btnLuu, btnHuy;
     EditText addIdGV, addTenGV, add_hoc_ham, add_hoc_vi, add_email, add_sdt1, add_sdt2;
-    Spinner spn_id_bomon;
+    Spinner spn_ten_bomon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
         btnHuy = (Button) findViewById(R.id.btn_huy);
         addIdGV = (EditText) findViewById(R.id.addMaGV);
         addTenGV = (EditText) findViewById(R.id.addTenGV);
-        spn_id_bomon = (Spinner) findViewById(R.id.spn_id_bomon);
+        spn_ten_bomon = (Spinner) findViewById(R.id.spn_ten_bomon);
         add_hoc_ham = (EditText) findViewById(R.id.add_hoc_ham);
         add_hoc_vi = (EditText) findViewById(R.id.add_hoc_vi);
         add_email = (EditText) findViewById(R.id.add_email);
@@ -78,7 +78,7 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
                 android.R.layout.simple_spinner_item,
                 getDataAllBoMon());
 
-        spn_id_bomon.setAdapter(adapter);
+        spn_ten_bomon.setAdapter(adapter);
     }
 
     private List<BoMon> getDataAllBoMon() {
@@ -105,15 +105,13 @@ public class ActivityAddGiaoVien extends AppCompatActivity {
             Toast.makeText(this, "Nhập lại mã giáo viên", Toast.LENGTH_SHORT).show();
         } else {
             String ten = addTenGV.getText().toString();
-
             String hoc_ham = add_hoc_ham.getText().toString();
             String hoc_vi = add_hoc_vi.getText().toString();
             String email = add_email.getText().toString();
-            BoMon boMon = (BoMon) spn_id_bomon.getSelectedItem();
+            BoMon boMon = (BoMon) spn_ten_bomon.getSelectedItem();
             String id_bo_mon = boMon.maBoMon;
             String sdt1 = add_sdt1.getText().toString();
             String sdt2 = add_sdt2.getText().toString();
-
 
             ContentValues contentValues = new ContentValues();
             contentValues.put("maGiaoVien", id);

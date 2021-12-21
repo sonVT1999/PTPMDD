@@ -45,7 +45,7 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/add_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_id_bomon" />
+        app:layout_constraintTop_toBottomOf="@+id/spn_ten_bomon" />
 
     <EditText
         android:id="@+id/add_hoc_vi"
@@ -60,7 +60,7 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/add_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_id_bomon" />
+        app:layout_constraintTop_toBottomOf="@+id/spn_ten_bomon" />
 
     <EditText
         android:id="@+id/add_email"
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <Spinner
-        android:id="@+id/spn_id_bomon"
+        android:id="@+id/spn_ten_bomon"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
